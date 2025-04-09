@@ -1,0 +1,82 @@
+/**
+ * Filter Theme - Responsive Styles
+ */
+
+/* Base responsive padding */
+@media (max-width: 781px) {
+    .wp-block-column:not(:only-child),
+    .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .wp-block-group.is-layout-constrained > *:not(.alignfull) {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Content sections */
+    .wp-block-cover__inner-container,
+    .wp-site-blocks > main,
+    .wp-block-template-part.header,
+    .entry-content > * {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Remove global padding */
+    .wp-block-group.has-global-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    #wp--skip-link--target.wp-block-group.has-global-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .wp-block-block-development-examples-image-hero-block {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    /* Handle image hero block specifically */
+    .wp-block-block-development-examples-image-hero-block .image-hero-block-content {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .wp-site-blocks > header .wp-block-group:last-child {
+        margin-left: 0;
+
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 600px) {
+    .wp-block-column:not(:only-child),
+    .wp-block-group.is-layout-constrained > *:not(.alignfull),
+    .wp-block-cover__inner-container,
+    .wp-site-blocks > main,
+    .wp-block-template-part.header,
+    .entry-content > * {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    
+    /* Make buttons more touchable on mobile */
+    .wp-block-button__link,
+    button {
+        min-height: 44px;
+        /* padding: 10px 15px !important; */
+    }
+    .wp-site-blocks > header .wp-block-group:last-child {
+        align-items: flex-start;
+
+    }
+    .wp-block-navigation__responsive-container-open {
+        align-items: center;
+
+    }
+} 

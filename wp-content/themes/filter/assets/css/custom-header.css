@@ -1,0 +1,287 @@
+/**
+ * Custom Header Styles
+ * 
+ * Styles for the custom header based on Figma design
+ */
+
+/* Global typography variables based on Figma design */
+:root {
+  --header-text-color: #4d5a5e;
+  --menu-font-size: 16px;
+  --menu-line-height: 19px;
+  --menu-letter-spacing: 0.01em;
+  --menu-font-weight: 400;
+  --menu-item-spacing: 20px;
+}
+
+/* Header container styling */
+.wp-block-group.alignwide {
+  margin: 0 auto 26px auto;
+}
+
+/* Header logo styling */
+.site-logo-wrapper,
+.wp-block-site-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5.5px; /* Matching Figma design */
+}
+
+.site-logo-wrapper svg,
+.wp-block-site-logo svg {
+  fill: var(--header-text-color);
+}
+
+/* Make site logo clickable and maintain styling */
+.wp-block-site-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-block-site-logo img {
+  max-height: 46px;
+  width: auto;
+}
+
+.wp-block-site-title a {
+  color: var(--header-text-color) !important;
+  font-size: 32px !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Navigation menu styling */
+.wp-block-navigation {
+  font-size: var(--menu-font-size);
+  height: var(--menu-line-height);
+  display: flex;
+  align-items: center;
+}
+
+.wp-block-navigation .wp-block-navigation__container {
+  gap: 20px !important; /* Match Figma's menu item spacing of 20px */
+}
+
+.wp-block-navigation-item {
+  line-height: var(--menu-line-height);
+  font-size: var(--menu-font-size);
+  font-weight: var(--menu-font-weight);
+  letter-spacing: var(--menu-letter-spacing);
+}
+
+.header-menu-item,
+.wp-block-navigation-link__content {
+  color: var(--header-text-color) !important;
+  font-size: var(--menu-font-size);
+  height: var(--menu-line-height);
+  line-height: var(--menu-line-height);
+  font-weight: var(--menu-font-weight);
+  letter-spacing: var(--menu-letter-spacing);
+}
+
+/* Apply the same typography to links sitewide for consistency */
+a {
+  color: var(--header-text-color);
+  font-weight: var(--menu-font-weight);
+}
+
+/* Account/cart icons styling */
+.wc-block-customer-account__account-icon,
+.wc-block-mini-cart__button {
+  color: var(--header-text-color) !important;
+}
+
+/* Search icon styling */
+.search-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  transition: transform 0.2s ease;
+}
+
+.search-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.search-icon-wrapper svg {
+  fill: var(--header-text-color);
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Make the search icon appear in the header with !important flag */
+.wp-block-group .search-icon-wrapper {
+  display: flex !important;
+}
+
+/* Login button styling */
+.wp-block-button__link {
+  width: 124px !important;
+  height: 39px !important;
+  padding: 10px 40px !important;
+  border-radius: 72px !important;
+  background-color: #4D5A5E !important;
+  color: #FFFFFF !important;
+  border: 0.7px solid rgba(0, 0, 0, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+  transition: all 0.2s ease !important;
+}
+
+.wp-block-button__link:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Menu items spacing */
+.wp-block-navigation .wp-block-navigation__container {
+  gap: 20px !important; /* Match Figma's menu item spacing of 20px */
+}
+
+/* Right menu items spacing */
+.wp-block-group [style*="spacing"] {
+  gap: 32px !important; /* Match Figma's spacing between menu and icons of 32px */
+}
+
+/* Icons spacing */
+.wp-block-group:has(.search-icon-wrapper) {
+  display: flex;
+  align-items: center;
+  gap: 20px !important; /* Match Figma's spacing between icons of 32px */
+}
+
+/* Search overlay */
+.filter-search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-search-container {
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+.filter-search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.filter-search-field {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  background: white;
+  color: var(--header-text-color);
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.filter-search-submit {
+  padding: 15px 25px;
+  background-color: var(--header-text-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.filter-search-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+body.search-active {
+  overflow: hidden;
+}
+
+/* Responsive styles */
+@media (max-width: 781px) {
+  .wp-block-group.alignwide {
+    flex-direction: column;
+  }
+  
+  /* Stack menu items on mobile */
+  .wp-block-group [style*="spacing"] {
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+/* Header layout fixes */
+.wp-site-blocks > header > .wp-block-group.alignfull > .wp-block-group.alignwide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.wp-site-blocks > header .site-logo-wrapper {
+  margin-right: auto;
+}
+
+.wp-site-blocks > header .wp-block-group:last-child {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Mini Cart Icon Override */
+.wc-block-mini-cart__button {
+  position: relative;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  color: var(--header-text-color) !important;
+}
+
+.wc-block-mini-cart__button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 26C25.5304 26 26.0391 26.2107 26.4142 26.5858C26.7893 26.9609 27 27.4696 27 28C27 28.5304 26.7893 29.0391 26.4142 29.4142C26.0391 29.7893 25.5304 30 25 30C23.89 30 23 29.1 23 28C23 26.89 23.89 26 25 26ZM9 10H12.27L13.21 12H28C28.2652 12 28.5196 12.1054 28.7071 12.2929C28.8946 12.4804 29 12.7348 29 13C29 13.17 28.95 13.34 28.88 13.5L25.3 19.97C24.96 20.58 24.3 21 23.55 21H16.1L15.2 22.63L15.17 22.75C15.17 22.8163 15.1963 22.8799 15.2432 22.9268C15.2901 22.9737 15.3537 23 15.42 23H27V25H15C13.89 25 13 24.1 13 23C13 22.65 13.09 22.32 13.24 22.04L14.6 19.59L11 12H9V10ZM15 26C15.5304 26 16.0391 26.2107 16.4142 26.5858C16.7893 26.9609 17 27.4696 17 28C17 28.5304 16.7893 29.0391 16.4142 29.4142C16.0391 29.7893 15.5304 30 15 30C13.89 30 13 29.1 13 28C13 26.89 13.89 26 15 26ZM24 19L26.78 14H14.14L16.5 19H24Z' fill='%234D5A5E'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.wc-block-mini-cart__button svg {
+  display: none !important;
+} 

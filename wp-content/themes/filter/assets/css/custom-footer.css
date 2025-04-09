@@ -1,0 +1,118 @@
+/* Custom Footer Styling */
+
+/* Main footer background and container */
+.wp-block-template-part.wp-block-template-part--has-theme-style footer .wp-block-group.has-tertiary-background-color,
+.wp-block-group.has-tertiary-background-color {
+    background-color: #4a4a4a !important; /* Dark gray background from Figma */
+}
+
+.wp-block-group.alignwide,
+body .is-layout-flex.alignwide {
+    max-width: 1360px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Logo styling - make more specific to override theme defaults */
+footer .wp-block-site-logo {
+    margin-right: 10px !important;
+}
+
+footer .wp-block-site-logo img {
+    max-height: 35px;
+    width: auto;
+}
+
+footer .wp-block-site-title,
+footer .wp-block-site-title a {
+    font-size: 2.25rem !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Spacing for footer columns - with !important to override theme styles */
+footer .wp-block-columns.alignwide {
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+footer .wp-block-column {
+    flex-basis: auto !important;
+}
+
+/* Navigation links styling with higher specificity */
+footer .wp-block-navigation .wp-block-navigation-item {
+    margin-bottom: 20px !important;
+}
+
+footer .wp-block-navigation .wp-block-navigation-item a,
+footer .wp-block-navigation .wp-block-navigation-item__content {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+}
+
+footer .wp-block-navigation .wp-block-navigation-item a:hover {
+    text-decoration: underline !important;
+}
+
+/* Contact info styling with higher specificity */
+footer .wp-block-column .wp-block-group p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+    color: #ffffff !important;
+}
+
+/* Social icons styling with higher specificity */
+footer .wp-block-social-links {
+    justify-content: flex-end !important;
+    margin-bottom: 20px !important;
+}
+
+footer .wp-block-social-links .wp-block-social-link {
+    margin: 0 8px !important;
+}
+
+footer .wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor {
+    color: #ffffff !important;
+}
+
+/* Copyright text with higher specificity */
+footer .has-text-align-right {
+    margin-top: 10px !important;
+    color: #ffffff !important;
+}
+
+/* Footer spacing fixes */
+footer .wp-block-template-part {
+    padding: 0 !important;
+}
+
+footer .wp-block-group {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Responsive adjustments with higher specificity */
+@media (max-width: 768px) {
+    footer .wp-block-columns {
+        flex-wrap: wrap !important;
+    }
+    
+    footer .wp-block-column {
+        flex-basis: 100% !important;
+        margin-bottom: 30px !important;
+    }
+    
+    footer .wp-block-social-links,
+    footer .has-text-align-right {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    footer .wp-block-column .wp-block-group {
+        align-items: center !important;
+    }
+} 
