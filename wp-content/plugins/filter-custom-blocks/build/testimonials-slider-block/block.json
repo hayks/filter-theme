@@ -1,0 +1,106 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/testimonials-slider-block",
+  "version": "0.1.0",
+  "title": "Testimonials Slider",
+  "category": "filter-blocks",
+  "icon": "format-quote",
+  "description": "Display customer testimonials in a beautiful, customizable slider",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "What Customers Say"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Don't just take our word for it—hear from the people who've transformed their homes with our collections."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Read More"
+    },
+    "buttonLink": {
+      "type": "string",
+      "default": "#"
+    },
+    "testimonials": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "quote": "The quality of the furniture is exceptional, and it fits perfectly in my space. I'll definitely be coming back for more!",
+          "author": "Sarah J."
+        },
+        {
+          "id": "2",
+          "quote": "I was blown away by the customer service and the speedy delivery. The designs are exactly as advertised—stunning!",
+          "author": "James P."
+        },
+        {
+          "id": "3",
+          "quote": "I've received so many compliments on my new living room set. The attention to detail and craftsmanship is impressive.",
+          "author": "Emily R."
+        },
+        {
+          "id": "4",
+          "quote": "The ordering process was seamless, and the delivery team was professional. My new dining set exceeded all my expectations!",
+          "author": "Mark T."
+        }
+      ]
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "cardBackgroundColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "slideInterval": {
+      "type": "number",
+      "default": 5000
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "readMoreText": {
+      "type": "string",
+      "default": "Read More"
+    },
+    "readMoreLink": {
+      "type": "string",
+      "default": "#"
+    }
+  }
+}

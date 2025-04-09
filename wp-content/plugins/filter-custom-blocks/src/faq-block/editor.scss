@@ -1,0 +1,100 @@
+/**
+ * The following styles get applied inside the editor only.
+ */
+
+.wp-block-block-development-examples-faq-block {
+    // Border to help visualize block in editor
+    padding: 1rem;
+    border: 1px dashed #ddd;
+    font-family: 'Inter', sans-serif;
+    color: #4d5a5e;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    // Controls for FAQ items (only in editor)
+    .faq-item-controls {
+        display: flex;
+        align-items: center;
+        
+        .faq-move-button,
+        .faq-remove-button,
+        .faq-toggle-button {
+            margin-left: 0.5rem;
+            padding: 4px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4d5a5e;
+            
+            &:hover {
+                background-color: rgba(77, 90, 94, 0.1);
+            }
+            
+            &:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+                
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    
+    // Editing experience improvements
+    .faq-item {
+        transition: all 0.2s ease;
+        margin-bottom: 0.5rem;
+        
+        &:hover {
+            box-shadow: 0 0 0 1px #4d5a5e;
+        }
+        
+        &.is-open {
+            .faq-answer-container {
+                display: block;
+            }
+        }
+        
+        .faq-question,
+        .faq-answer {
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+    
+    // Add button to look like a WordPress component
+    .faq-add-button {
+        background-color: #f0f0f0;
+        border: 1px dashed #ccc;
+        border-radius: 4px;
+        width: 100%;
+        padding: 0.75rem;
+        color: #4d5a5e;
+        
+        &:hover {
+            background-color: #e5e5e5;
+        }
+    }
+    
+    // Inspector controls styling
+    .color-picker-control {
+        margin-bottom: 16px;
+        
+        p {
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+    }
+    
+    // Read more button styling in editor
+    .faq-read-more-button {
+        background-color: #4d5a5e;
+        color: #ffffff;
+        border-radius: 10000px;
+    }
+}

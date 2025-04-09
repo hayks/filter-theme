@@ -1,0 +1,130 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/card-grid-block",
+  "version": "0.1.0",
+  "title": "Card Grid Block",
+  "category": "filter-blocks",
+  "icon": "grid-view",
+  "description": "Display a responsive grid of cards with images, titles and descriptions.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "cards": {
+      "type": "array",
+      "default": [
+        {
+          "id": 1,
+          "title": "Best-Selling Sofas",
+          "description": "Upgrade your living room with our top-rated sofa collection.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 2,
+          "title": "Modern Dining Sets",
+          "description": "Host in style with elegant dining sets tailored for every occasion.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 3,
+          "title": "Stylish House Plants",
+          "description": "Create a sanctuary with our best-selling houseplants.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 4,
+          "title": "Statement Lighting",
+          "description": "Brighten your space with lighting pieces that stand out.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        }
+      ]
+    },
+    "columns": {
+      "type": "number",
+      "default": 4
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "style1"
+    },
+    "cardBackgroundColor": {
+      "type": "string",
+      "default": "#F2F2F2"
+    },
+    "cardTextColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 25
+    },
+    "spacing": {
+      "type": "number",
+      "default": 32
+    },
+    "style2Cards": {
+      "type": "array",
+      "default": [
+        {
+          "id": 1,
+          "title": "10-Year Warranty",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 2,
+          "title": "Free Delivery",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 3,
+          "title": "Handcrafted Quality",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 4,
+          "title": "Sustainable Materials",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 5,
+          "title": "Exclusive Discounts",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 6,
+          "title": "Hassle-Free Returns",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        }
+      ]
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+} 

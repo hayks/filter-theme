@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/faq-block",
+  "version": "0.1.0",
+  "title": "FAQ Accordion",
+  "category": "filter-blocks",
+  "icon": "list-view",
+  "description": "Display frequently asked questions in an accordion layout",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "FAQs"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Explore our most frequently asked questions below to find the answers you need. If you don't see your question, feel free to contact our friendly support team for assistance."
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "question": "Can I customise my order?",
+          "answer": "Yes! Many of our furniture pieces come with customisation options like fabric, colour, and size. Just check the product details or contact our team for assistance.",
+          "isOpen": true
+        },
+        {
+          "id": "2",
+          "question": "What are the delivery options?",
+          "answer": "We offer standard delivery (3-5 business days), express delivery (1-2 business days), and white glove delivery service for larger items that includes installation and packaging removal.",
+          "isOpen": false
+        },
+        {
+          "id": "3",
+          "question": "Do you offer a return policy?",
+          "answer": "Yes, we have a 30-day return policy. Items must be in original condition with all packaging. Custom orders may have different return terms - please check the product details.",
+          "isOpen": false
+        },
+        {
+          "id": "4",
+          "question": "How do I care for my furniture?",
+          "answer": "Each piece comes with specific care instructions. Generally, avoid direct sunlight, clean regularly with appropriate products, and address spills immediately. For detailed care, refer to the product manual.",
+          "isOpen": false
+        },
+        {
+          "id": "5",
+          "question": "Do you offer financing options?",
+          "answer": "Yes, we offer several financing options through our partners. You can see available plans during checkout, with options for 0% interest and flexible payment terms on qualifying purchases.",
+          "isOpen": false
+        }
+      ]
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#F2F2F2"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 16
+    },
+    "itemSpacing": {
+      "type": "number",
+      "default": 20
+    },
+    "showReadMoreButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "readMoreButtonText": {
+      "type": "string",
+      "default": "Read More"
+    },
+    "readMoreButtonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "readMoreButtonColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "readMoreButtonTextColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    }
+  }
+}

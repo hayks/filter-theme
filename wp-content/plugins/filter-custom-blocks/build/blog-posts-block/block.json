@@ -1,0 +1,82 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/blog-posts-block",
+  "version": "0.1.0",
+  "title": "Blog Posts Grid",
+  "category": "filter-blocks",
+  "icon": "grid-view",
+  "description": "Display your blog posts in a beautiful, customizable and responsive grid layout",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Get Inspired"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Discover tips, ideas, and expert advice to elevate your living space."
+    },
+    "postsToShow": {
+      "type": "number",
+      "default": 4
+    },
+    "columns": {
+      "type": "number",
+      "default": 4,
+      "description": "Maximum number of columns for larger screens. Responsive breakpoints will automatically adjust for smaller screens."
+    },
+    "categories": {
+      "type": "array",
+      "default": []
+    },
+    "tags": {
+      "type": "array",
+      "default": []
+    },
+    "order": {
+      "type": "string",
+      "default": "desc"
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "date"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "rgba(255, 255, 255, 0.05)"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "cardBackgroundColor": {
+      "type": "string",
+      "default": "rgba(255, 255, 255, 0.05)"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 24
+    }
+  }
+}

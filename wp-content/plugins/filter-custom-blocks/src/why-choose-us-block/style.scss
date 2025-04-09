@@ -1,0 +1,238 @@
+/**
+ * Styles for the Why Choose Us block
+ * These styles are loaded both in the editor and on the frontend
+ */
+
+.wp-block-block-development-examples-why-choose-us-block {
+    margin-top: 60px !important;
+    padding: 0;
+    background: #fff;
+    width: 100%;
+    max-width: var(--wp--style--global--content-size, 1140px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    
+    .why-choose-us-container {
+        max-width: var(--wp--style--global--content-size, 1140px);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--wp--style--root--padding-left, 24px);
+        padding-right: var(--wp--style--root--padding-right, 24px);
+    }
+    
+    .why-choose-us-header {
+        text-align: center;
+        margin-bottom: 20px;
+        
+        h2 {
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 100%;
+            color: #4d5a5e;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            color: #4d5a5e;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .why-choose-us-button {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 65px;
+        
+        button {
+            padding: 12px 24px;
+            background: #4d5a5e;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            transition: opacity 0.3s;
+            margin: 0;
+            
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+    
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 48px;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .why-choose-us-image {
+        flex: 1;
+        flex-basis: 45%;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        min-height: 300px;
+        
+        img.featured-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+        }
+    }
+    
+    .why-choose-us-content {
+        flex: 1;
+        flex-basis: 55%;
+        padding: 64px 48px 64px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        @media (max-width: 768px) {
+            padding: 24px;
+        }
+        
+        .why-choose-us-title {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+        
+        .why-choose-us-description {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 0 0 10px 0;
+        }
+        
+        .why-choose-us-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 10px 0 20px;
+            
+            .why-choose-us-benefit-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 0;
+                
+                .benefit-icon {
+                    flex-shrink: 0;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 2px;
+                    
+                    svg {
+                        width: 20px;
+                        height: 21px;
+                        fill: currentColor;
+                    }
+                }
+                
+                .benefit-text {
+                    flex-grow: 1;
+                }
+            }
+        }
+        
+        .why-choose-us-button-wrapper {
+            margin-top: 20px;
+            margin-bottom: 0;
+            
+            .why-choose-us-button {
+                display: inline-block;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 16px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                margin: 0;
+                padding: 12px 24px;
+                
+                &:hover {
+                    opacity: 0.9;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+// Editor-specific styles
+.editor-styles-wrapper {
+    .wp-block-block-development-examples-why-choose-us-block {
+        .benefit-item-editor {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+            
+            .benefit-actions {
+                display: flex;
+                gap: 8px;
+                margin-top: 8px;
+            }
+        }
+        
+        .add-benefit-button {
+            margin-top: 16px;
+        }
+        
+        .image-preview-wrapper {
+            margin-bottom: 15px;
+            
+            .image-actions {
+                display: flex;
+                gap: 8px;
+                margin-top: 8px;
+            }
+        }
+        
+        .image-placeholder {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                background-color: #e8e8e8;
+            }
+            
+            .components-button {
+                height: auto;
+                padding: 12px 20px;
+            }
+        }
+        
+        // Ensure SVG icons are consistent in editor
+        .benefit-icon svg {
+            width: 20px;
+            height: 21px;
+            fill: currentColor;
+        }
+    }
+} 

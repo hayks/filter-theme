@@ -1,0 +1,283 @@
+/**
+ * Card Grid Block styles for both editor and frontend
+ */
+
+.wp-block-block-development-examples-card-grid-block {
+    margin-top: 60px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    overflow-x: visible;
+    box-sizing: border-box;
+    
+    @media (max-width: 768px) {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+    
+    @media (max-width: 480px) {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 30px;
+        padding-top: 30px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .card-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        gap: 32px;
+        box-sizing: border-box;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .card-grid-item {
+        display: flex;
+        flex-direction: column;
+        height: 272px;
+        width: 100%;
+        max-width: 316px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        position: relative;
+        background-color: #F2F2F2;
+        border-radius: 25px;
+        padding: 32px;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            padding: 24px;
+            height: auto;
+            min-height: 240px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 16px;
+            min-height: 220px;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+            .card-image {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .card-inner {
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card-image-container {
+        width: 72px;
+        height: 72px;
+        overflow: hidden;
+        margin-bottom: 0;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        display: block;
+    }
+
+    .card-title,
+    .card-description {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0;
+        font-weight: normal;
+        color: #4D5A5E;
+        opacity: 0.9;
+    }
+
+    // Style 2 (new 6-card layout)
+    .card-grid-style2 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .card-grid-item-style2 {
+        height: 134px;
+        width: 210px;
+        background-color: #F2F2F2;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 16px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 0 auto;
+        
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            height: auto;
+            min-height: 120px;
+            padding: 16px;
+            gap: 12px;
+        }
+        
+        @media (max-width: 480px) {
+            min-height: 110px;
+            padding: 16px;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            gap: 10px;
+        }
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            .card-icon-image {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        @media (max-width: 480px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .card-icon-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .card-title-style2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        color: #525252;
+        
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
+    }
+}
+
+/* Add a more specific selector for card title to override any external styles */
+.wp-block-block-development-examples-card-grid-block .card-grid-item .card-inner .card-title,
+.wp-block-block-development-examples-card-grid-block .card-grid .card-grid-item .card-title,
+html body .wp-block-block-development-examples-card-grid-block .card-title,
+.wp-block-block-development-examples-card-grid-block h3.card-title {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+    color: #4d5a5e !important;
+    
+    @media (max-width: 768px) {
+        font-size: 28px !important;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 24px !important;
+    }
+} 

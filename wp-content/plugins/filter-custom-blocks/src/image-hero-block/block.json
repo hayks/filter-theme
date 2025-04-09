@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "block-development-examples/image-hero-block",
+	"version": "0.1.0",
+	"title": "Image Hero Block",
+	"category": "filter-blocks",
+	"icon": "align-full-width",
+	"description": "Display a full-width hero section with an image, heading, and optional call to action buttons.",
+	"keywords": ["hero", "image", "banner", "cta"],
+	"textdomain": "block-development-examples",
+	"attributes": {
+		"imageUrl": {
+			"type": "string",
+			"default": "https://via.placeholder.com/1360x540"
+		},
+		"title": {
+			"type": "string",
+			"default": "Stylish Living Starts Here"
+		},
+		"description": {
+			"type": "string",
+			"default": "Transform your space with timeless furniture, tailored just for you. Explore our exclusive collections and find your perfect match today."
+		},
+		"primaryButtonText": {
+			"type": "string",
+			"default": "Discover More"
+		},
+		"secondaryButtonText": {
+			"type": "string",
+			"default": "Shop Now"
+		},
+		"primaryButtonLink": {
+			"type": "string",
+			"default": "#"
+		},
+		"secondaryButtonLink": {
+			"type": "string",
+			"default": "#"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#4D5A5E"
+		},
+		"cornerRadius": {
+			"type": "number",
+			"default": 24
+		},
+		"id": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": true,
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js"
+} 

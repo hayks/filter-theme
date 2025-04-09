@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "block-development-examples/newsletter-block",
+  "title": "Newsletter Subscription",
+  "category": "widgets",
+  "icon": "email",
+  "description": "A newsletter subscription form with a sleek design.",
+  "keywords": [
+    "newsletter",
+    "email",
+    "subscription",
+    "subscribe",
+    "signup"
+  ],
+  "version": "0.1.0",
+  "textdomain": "block-development-examples",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Stay Updated"
+    },
+    "description": {
+      "type": "string",
+      "default": "Be the first to know about exclusive offers, new collections, and seasonal trends."
+    },
+    "placeholderText": {
+      "type": "string",
+      "default": "Enter your email address"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Subscribe"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/product-showcase-block",
+  "version": "0.1.0",
+  "title": "Product Showcase Block",
+  "category": "filter-blocks",
+  "icon": "products",
+  "description": "Display a curated showcase of WooCommerce products with images, titles, prices, and descriptions.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Transform Your Space"
+    },
+    "subheading": {
+      "type": "string",
+      "default": "Explore our exclusive collections and find your perfect match today."
+    },
+    "products": {
+      "type": "array",
+      "default": [
+        {
+          "id": 0,
+          "title": "Modern Lounge Sofa Set",
+          "price": "£899",
+          "description": "Relax in style with our modern lounge sofa, designed for comfort and timeless elegance.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 0,
+          "title": "Scandinavian Accent Chair",
+          "price": "£399",
+          "description": "Add a touch of Nordic charm to your home with this sleek, comfortable accent chair.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 0,
+          "title": "Minimalist Shelf Décor Set",
+          "price": "£149",
+          "description": "Bring a modern edge to your shelving with this curated set of ceramic vases and cups.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        },
+        {
+          "id": 0,
+          "title": "Contemporary Dining Table",
+          "price": "£699",
+          "description": "Transform your dining space with this statement table, perfect for modern homes.",
+          "imageUrl": "",
+          "imageId": 0,
+          "imageAlt": ""
+        }
+      ]
+    },
+    "productIds": {
+      "type": "array",
+      "default": []
+    },
+    "numberOfProducts": {
+      "type": "number",
+      "default": 4
+    },
+    "displayMode": {
+      "type": "string",
+      "default": "custom"
+    },
+    "cardBackgroundColor": {
+      "type": "string",
+      "default": "rgba(255, 255, 255, 0.05)"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 24
+    },
+    "spacing": {
+      "type": "number",
+      "default": 24
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

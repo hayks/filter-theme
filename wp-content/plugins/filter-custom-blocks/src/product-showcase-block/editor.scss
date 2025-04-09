@@ -1,0 +1,209 @@
+/**
+ * The following styles get applied inside the editor only.
+ */
+
+// Import base styles using @use instead of @import to fix deprecation warning
+@use './style.scss';
+
+.wp-block-block-development-examples-product-showcase-block {
+    // Editor-specific styles
+    .product-card {
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        color: rgba(77, 90, 94, 1);
+        width: 322px;
+        border-radius: 24px;
+        
+        @media (max-width: 768px) {
+            width: 100%;
+            max-width: 322px;
+        }
+        
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+        
+        &.is-selected {
+            outline: 2px solid #007cba;
+        }
+    }
+    
+    .product-image-placeholder {
+        width: 322px;
+        height: 445px;
+        border-radius: 24px;
+        
+        @media (max-width: 768px) {
+            width: 100%;
+            height: auto;
+            padding-bottom: 138%; /* Maintain aspect ratio */
+        }
+        
+        .product-image-upload-button {
+            width: 100% !important;
+            height: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            cursor: pointer !important;
+            border: none !important;
+            background-color: rgba(0, 0, 0, 0.05) !important;
+            color: rgba(77, 90, 94, 1) !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 10 !important;
+            border-radius: 24px !important;
+            
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1) !important;
+                color: #000 !important;
+            }
+            
+            span {
+                font-size: 2rem;
+                display: block;
+                
+                @media (max-width: 480px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+    .color-picker-control {
+        margin-bottom: 1.5rem;
+    }
+    
+    // WooCommerce product selector
+    .woo-product-selector {
+        .product-search {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+            margin-bottom: 1rem;
+            
+            @media (max-width: 600px) {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            
+            .components-base-control {
+                flex: 1;
+            }
+        }
+        
+        .search-results, 
+        .selected-products {
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            
+            @media (max-width: 480px) {
+                padding: 0.75rem;
+            }
+            
+            h4 {
+                margin-top: 0;
+                margin-bottom: 0.75rem;
+                font-size: 1.25rem;
+                color: rgba(77, 90, 94, 1);
+                
+                @media (max-width: 480px) {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        
+        .selected-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            
+            @media (max-width: 480px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+        
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            
+            @media (max-width: 480px) {
+                max-height: 180px;
+            }
+            
+            .product-item {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                
+                @media (max-width: 480px) {
+                    padding: 0.4rem 0;
+                }
+                
+                &:last-child {
+                    border-bottom: none;
+                }
+                
+                .components-checkbox-control {
+                    flex: 1;
+                    
+                    .components-base-control__field {
+                        margin-bottom: 0;
+                    }
+                }
+                
+                .product-thumbnail {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                    margin-left: 8px;
+                    
+                    @media (max-width: 480px) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+        
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
+    }
+    
+    // For WooCommerce mode
+    .components-base-control {
+        margin-bottom: 1.5rem;
+        
+        @media (max-width: 480px) {
+            margin-bottom: 1.25rem;
+        }
+        
+        .components-button {
+            margin-bottom: 1rem;
+            
+            @media (max-width: 480px) {
+                margin-bottom: 0.75rem;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+} 

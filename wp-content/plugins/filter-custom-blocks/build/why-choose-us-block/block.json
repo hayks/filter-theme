@@ -1,0 +1,94 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/why-choose-us-block",
+  "version": "0.1.0",
+  "title": "Why Choose Us Block",
+  "category": "filter-blocks",
+  "icon": "editor-ul",
+  "description": "A block with an image and list of benefits highlighting why customers should choose your business.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Why Choose Us?"
+    },
+    "description": {
+      "type": "string",
+      "default": "Discover the difference with our expertly curated furniture collections and exceptional service."
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#F2F2F2"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "benefits": {
+      "type": "array",
+      "default": [
+        {
+          "id": 1,
+          "text": "High-quality craftsmanship for long-lasting pieces."
+        },
+        {
+          "id": 2,
+          "text": "Free delivery on all orders over £50."
+        },
+        {
+          "id": 3,
+          "text": "Easy returns and hassle-free shopping experience."
+        },
+        {
+          "id": 4,
+          "text": "Personalized product recommendations just for you."
+        }
+      ]
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 16
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/collection-hero-block",
+  "version": "0.1.0",
+  "title": "Collection Hero Block",
+  "category": "filter-blocks",
+  "icon": "align-full-width",
+  "description": "Display a full-width hero section with collection images and call to action buttons.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "mainImage": {
+      "type": "object",
+      "default": {
+        "url": "",
+        "id": 0,
+        "alt": ""
+      }
+    },
+    "smallImages": {
+      "type": "array",
+      "default": [
+        {
+          "id": 1,
+          "url": "",
+          "imageId": 0,
+          "alt": ""
+        },
+        {
+          "id": 2,
+          "url": "",
+          "imageId": 0,
+          "alt": ""
+        },
+        {
+          "id": 3,
+          "url": "",
+          "imageId": 0,
+          "alt": ""
+        }
+      ]
+    },
+    "label": {
+      "type": "string",
+      "default": "NEW COLLECTION"
+    },
+    "title": {
+      "type": "string",
+      "default": "Discover Our Collections"
+    },
+    "description": {
+      "type": "string",
+      "default": "Refresh your home with vibrant, airy designs from our exclusive Spring Collections. From elegant dining sets to cozy living room essentials, find the perfect pieces to brighten your space this season."
+    },
+    "primaryButtonText": {
+      "type": "string",
+      "default": "Shop the Collection"
+    },
+    "primaryButtonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+
+    "backgroundColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "primaryButtonColor": {
+      "type": "string",
+      "default": "#4D5A5E"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 24
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+} 

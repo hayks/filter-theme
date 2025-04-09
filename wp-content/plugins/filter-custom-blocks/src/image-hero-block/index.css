@@ -1,0 +1,166 @@
+/* Editor styles */
+.wp-block-block-development-examples-image-hero-block {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image-container {
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+/* Direct targeting of the img element with extremely high specificity */
+img.image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block img.image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image-container img.image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-container .image-hero-block-image-container img.image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 24px !important;
+    -webkit-border-radius: 24px !important;
+    -moz-border-radius: 24px !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+}
+
+/* Explicitly disable any hover effects on the image */
+.wp-block-block-development-examples-image-hero-block:hover .image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block:hover img.image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image:hover,
+.wp-block-block-development-examples-image-hero-block img.image-hero-block-image:hover,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image-container:hover .image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image-container:hover img.image-hero-block-image,
+.wp-block-block-development-examples-image-hero-block .image-hero-block-image-container img.image-hero-block-image:hover {
+    transform: none !important;
+    scale: 1 !important;
+    transition: none !important;
+    border-radius: 24px !important;
+    -webkit-border-radius: 24px !important;
+    -moz-border-radius: 24px !important;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    color: #757575;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    max-width: 1360px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    color: #4D5A5E;
+    width: 100%;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 700px;
+    color: #4D5A5E;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    align-items: center;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-primary-button {
+    background-color: #F2F2F2;
+    color: #4D5A5E;
+    width: 193px !important;
+    min-width: 0 !important;
+    max-width: none;
+    border: none;
+    border-radius: 10000px;
+    height: 39px;
+}
+
+.wp-block-block-development-examples-image-hero-block .image-hero-block-secondary-button {
+    background-color: #4D5A5E;
+    color: #FFFFFF;
+    width: 160px !important;
+    min-width: 0 !important;
+    max-width: none;
+    border-radius: 72px;
+    height: 39px;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Editor specific styles */
+.wp-block-block-development-examples-image-hero-block .block-editor-media-placeholder {
+    min-height: 200px;
+    border-radius: 24px;
+}
+
+/* Make editor UI responsive too */
+@media (max-width: 768px) {
+    .wp-block-block-development-examples-image-hero-block .image-hero-block-button {
+        padding: 0 24px;
+        font-size: 15px;
+    }
+    
+    .wp-block-block-development-examples-image-hero-block .image-hero-block-description {
+        max-width: 100%;
+    }
+    
+    .wp-block-block-development-examples-image-hero-block .image-hero-block-image,
+    .wp-block-block-development-examples-image-hero-block img.image-hero-block-image,
+    .wp-block-block-development-examples-image-hero-block .image-hero-block-image-container img.image-hero-block-image {
+        border-radius: 16px !important;
+        -webkit-border-radius: 16px !important;
+        -moz-border-radius: 16px !important;
+    }
+} 

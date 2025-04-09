@@ -1,0 +1,103 @@
+/**
+ * Editor styles for the Why Choose Us block
+ * These styles are loaded only in the editor
+ */
+
+.wp-block-block-development-examples-why-choose-us-block {
+    // General editor-specific styles
+    margin-bottom: 28px;
+    
+    // Make editor controls more accessible
+    .block-editor-rich-text__editable {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .block-editor-media-placeholder {
+        min-height: 200px;
+    }
+    
+    // Style benefit items for better editing experience
+    .why-choose-us-benefits {
+        .why-choose-us-benefit-item {
+            padding: 8px;
+            transition: background-color 0.2s;
+            border-radius: 4px;
+            
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+            
+            .benefit-text {
+                min-width: 100px;
+            }
+        }
+    }
+    
+    // Style the button for better editing experience
+    .why-choose-us-button-wrapper {
+        .why-choose-us-button {
+            min-width: 100px;
+            min-height: 24px;
+            padding: 10px 20px !important;
+        }
+    }
+    
+    // Style the content area in the editor
+    .why-choose-us-content {
+        h2.why-choose-us-title,
+        p.why-choose-us-description {
+            cursor: text;
+        }
+    }
+    
+    // Inspector controls styling improvements
+    .benefit-item-editor {
+        border: 1px solid #e2e4e7;
+        padding: 12px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        
+        .components-base-control {
+            margin-bottom: 12px;
+        }
+        
+        .benefit-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+    }
+    
+    // Image placeholder
+    .image-placeholder {
+        border: 2px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        background-color: #f5f5f5;
+        
+        .components-button {
+            padding: 12px 16px;
+            height: auto;
+            
+            &.has-icon {
+                min-width: auto;
+            }
+        }
+    }
+    
+    // Fix for image alignment
+    .why-choose-us-image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+    // Fix button alignment in editor
+    .why-choose-us-button {
+        display: inline-block;
+    }
+} 
