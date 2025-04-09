@@ -17,6 +17,16 @@ The theme includes a fully functional header with:
 
 All elements are functional and can be customized through the WordPress customizer or block editor.
 
+## Technical Details
+
+- Built with WordPress Block API v3 and modern React.js
+- Each block uses the standard block.json configuration
+- Frontend styling with SCSS compiled to optimized CSS
+- JavaScript interactions for dynamic elements
+- Server-side rendering for content-driven blocks (Blog Posts, Products)
+- Block editor integration with custom controls
+- Responsive design
+
 ## Available Blocks
 
 The plugin includes the following blocks, all of which are highly customizable with various attributes that can be modified directly in the block editor:
