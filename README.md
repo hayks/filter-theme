@@ -1,6 +1,6 @@
-# FILTER - WordPress Block Theme with Custom Gutenberg Blocks
+# 🎨 FILTER TEST TASK – WordPress Block Theme with Custom Gutenberg Blocks
 
-This project is a custom WordPress implementation based on a Figma design, featuring a modern block theme and highly customizable Gutenberg blocks. The project showcases a responsive homepage built with a collection of custom blocks that can be fully customized through the WordPress block editor.
+This project includes a custom WordPress block theme and a separate custom plugin that provides all Gutenberg blocks used on the homepage. The theme handles the layout, templates, and styling, while the plugin registers and manages reusable dynamic blocks built with the WordPress Block API and React.
 
 ## Theme Overview
 
