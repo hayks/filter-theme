@@ -1,4 +1,4 @@
-# 🎨 FILTER TEST TASK – WordPress Block Theme with Custom Gutenberg Blocks
+#  FILTER TEST TASK – WordPress Block Theme with Custom Gutenberg Blocks
 
 This project includes a custom WordPress block theme and a separate custom plugin that provides all Gutenberg blocks used on the homepage. The theme handles the layout, templates, and styling, while the plugin registers and manages reusable dynamic blocks built with the WordPress Block API and React.
 
